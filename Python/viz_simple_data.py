@@ -6,8 +6,8 @@ import statistics
 import time
 from datetime import datetime
 
-filename = 'DATA2B_20191010_Test1.LOG'
-data_path = 'C:/Users/pinso/Downloads/Lab Test 1/test1010/{}'.format(filename)
+filename = 'DATA29_20191012.LOG'
+data_path = 'C:/Users/pinso/Downloads/Lab Test 1/test1012/{}'.format(filename)
 num_channels = 30
 avg_span_1 = 1
 avg_span_2 = 10
@@ -49,12 +49,12 @@ for i in range(0, len(timestamp)):
     else:
         cleaned_avg_feet.append(0)
 
-with open('feet/feet_{}.txt'.format(filename), 'w') as f:
+with open('feet/feet_{}.txt'.format(filename[:-4]), 'w') as f:
     for i in range(1, len(time_sim)):
         f.write("{}\n".format(cleaned_avg_feet[i]))
     f.close()
 
-with open('stats/stats_{}.txt'.format(filename), 'w') as f:
+with open('stats/stats_{}.txt'.format(filename[:-4]), 'w') as f:
     f.write('Number of measurements: {}'.format(len(cleaned_avg_feet)))
 
 
@@ -72,5 +72,5 @@ plt.title("Distance between two nodes over time")
 plt.xlabel("Time")
 plt.ylabel("Measurement (ft)")
 plt.grid(False)
-plt.show()
+plt.savefig('figs/fig_{}.png'.format(filename[:-4]))
 # "C:/git/EoEL-Study-Visualization/Plots/1217.png",
