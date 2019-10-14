@@ -6,7 +6,8 @@ import statistics
 import time
 from datetime import datetime
 
-data_path = 'C:/Users/pinso/Downloads/Lab Test 1/test1010/DATA2B_20191010_Test1.LOG'
+filename = 'DATA2B_20191010_Test1.LOG'
+data_path = 'C:/Users/pinso/Downloads/Lab Test 1/test1010/{}'.format(filename)
 num_channels = 30
 avg_span_1 = 1
 avg_span_2 = 10
@@ -48,10 +49,14 @@ for i in range(0, len(timestamp)):
     else:
         cleaned_avg_feet.append(0)
 
-with open('dummy.txt', 'w') as f:
+with open('feet/feet_{}.txt'.format(filename), 'w') as f:
     for i in range(1, len(time_sim)):
         f.write("{}\n".format(cleaned_avg_feet[i]))
     f.close()
+
+with open('stats/stats_{}.txt'.format(filename), 'w') as f:
+    f.write('Number of measurements: {}'.format(len(cleaned_avg_feet)))
+
 
 print(len(cleaned_avg_feet))
 
