@@ -52,7 +52,7 @@ Type the following command and then paste the filepath you found.
 ```command
 export LD_PRELOAD=
 ```
-If it hasn't changed (Which it shouldn't have unless the ) it should look like:
+If it hasn't changed (Which it shouldn't have unless someone has removed ibeat) it should look like:
 ```command
 export LD_PRELOAD=/usr/local/MATLAB/R2019b/sys/os/glnxa64/libstdc++.so.6.0.22
 ```
