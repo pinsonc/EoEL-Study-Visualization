@@ -47,8 +47,8 @@ col_meas = 5;
 % If filtering by time, set the start time of your measurements here
 % Epoch time calculation: https://www.epochconverter.com/
 duration_measurement = 12 * 3600;
- epoch_start = 1544883908; %this needs to be hard coded from checking the data
- epoch_end   = epoch_start + duration_measurement;
+epoch_start = 1544883908; %this needs to be hard coded from checking the data
+epoch_end   = epoch_start + duration_measurement;
 
 dimensions = size(data_raw);
 num_measurements = dimensions(1) / num_channels;
