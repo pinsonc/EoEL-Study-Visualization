@@ -62,4 +62,5 @@ The devices take 30 measurements each second. Each one is outputted here and dis
 1570713486	c0:98:e5:42:00:00:00:2d	000150
 1570713487	c0:98:e5:42:00:00:00:2d	000194
 ```
+
 This is the same data as the verbose but it lists the node ranged with and it also precalculates the average. So there is only one entry per timestamp. This is the mode we are **primarily** working with these days. Somone would have had to manually change it if it is different.
