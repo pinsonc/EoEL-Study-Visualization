@@ -8,7 +8,7 @@ import os
 from datetime import datetime
 
 
-directory = os.fsencode('C:/Users/pinso/Downloads/Lab Test 1/test1012/')
+directory = os.fsencode('C:/Users/pinso/Downloads/data')
 
 for file in os.listdir(directory):
     filename = os.fsdecode(file)
