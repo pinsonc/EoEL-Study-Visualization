@@ -45,7 +45,7 @@ for file in os.listdir(directory):
         '''
 
         with open('feet/feet_{}.txt'.format(filename[:-4]), 'w') as f:
-            for i in range(1, len(time_sim)):
+            for i in range(1, len(ranges_avg_feet)):
                 f.write("{}\n".format(ranges_avg_feet[i]))
             f.close()
 
